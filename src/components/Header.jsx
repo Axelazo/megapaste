@@ -22,12 +22,6 @@ export default function Header() {
       <Link to="/register" {...linkProps}>
         Register
       </Link>
-      <Avatar
-        name="Dan Abrahmov"
-        size="md"
-        src="https://bit.ly/dan-abramov"
-        m="2"
-      />
     </Flex>
   );
 }

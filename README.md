@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# ReactPro - MegaPaste
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Es una aplicación para crear pastes (una mezcla de PasteBin y Multipaste) especialmente útil para compartir enlaces en sitios web de naturaleza warez (descargas)
 
-## Available Scripts
+Un paste puede contener N cantidad de subpastes (y se organizan en pestañas)
 
-In the project directory, you can run:
+El proyecto consumirá una API creado por mi (.NET CORE)
 
-### `npm start`
+# Entidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Paste
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Título
+- Contraseña
+- Fecha
+- Url
+- Visitas
+- Fecha de creación
+- Fecha de actualización
+- Creado por
 
-### `npm test`
+## Sub Paste
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Id Paste
+- Contenido
+- Fecha de creación
+- Fecha de actualización
+- Creado por
 
-### `npm run build`
+## Reportes/Problemas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Id Paste
+- Nombre
+- Contenido
+- Correo electrónico
+- Fecha
+- Resuelto?
+- Fecha de resolución
+- Fecha de creación
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usuarios
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Id Paste
+- Nombres
+- Apellidos
+- Correo electrónico
+- Contraseña
+- Id Rol
 
-### `npm run eject`
+## Roles
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Titulo
+- Descripcion
+- Activo?
+- Fecha de creación
+- Fecha de actualización
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Roles y permisos
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Id Rol
+- Id Permiso
+- Descripcion
+- Fecha de creación
+- Fecha de actualización
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Permisos
 
-## Learn More
+- Titulo
+- Descripcion
+- Activo?
+- Fecha de creación
+- Fecha de actualización
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Relaciones
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Un usuario tiene un rol
+- Un rol puede tener muchos permisos
+- Un usuario puede tener muchos pastes
+- Un paste puede tener muchos subpastes
+- Un paste puede tener muchos reportes
 
-### Code Splitting
+# Funciones
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- CRUD usuarios
+- CRUD pastes
+  - CRUD subpastes
+- CRUD reportes
+- CRUD roles
+  - CRUD permisos
 
-### Analyzing the Bundle Size
+# Pantallas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Registro
+- Inicio de Sesión
+- Dashboard
+- Ver paste
+- CRUD Pastes
+- CRUD Reportes
+- Panel de Administración
+  - CRUD Usuarios
+  - CRUD Roles
 
-### Making a Progressive Web App
+# Capturas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Splash](https://i.imgur.com/8Ey0PqB.png)
+![Login](https://i.imgur.com/OiIIARl.png)
+![Register](https://i.imgur.com/sOPCiQq.png)
+![DashboardWIP](https://i.imgur.com/yuVFphl.png)
+![Pastes](https://i.imgur.com/R0oNkQI.png)
